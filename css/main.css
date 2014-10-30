@@ -13,8 +13,8 @@ body {
     width: 100%;
     height: 100%;
     min-height: 100%;
-    overflow: scroll;
-    background: grey;
+/*    overflow: scroll;
+*/    background: grey;
     position: relative;
 }
 
@@ -25,7 +25,8 @@ body {
     width: 150px;
     padding-top: 10px;
     background-color: #fefefe;
-    border-right: 1px solid #eee;
+    border-right: 1px solid #EEE;
+    border-right: 1px solid #ddd;
     font-size: 0.836em;
 }
 
@@ -66,9 +67,9 @@ body {
 }
 
 .header h1 {
-    position: absolute;
+    position: relative;
     top: 50%;
-    display: block;
+    display: inline;
     left: 0;
     right: 0;
     text-align: center;
