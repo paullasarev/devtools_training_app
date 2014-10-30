@@ -1,19 +1,21 @@
 $(function() {
-    function getHeaderOffset() {
-        return -$('#pageHeader').offset().top + $(window).scrollTop();
+    function getOffset(el) {
+        return el.offset().top + $(window).scrollTop();
     }
 
     updateHeaderPosition();
 
     function updateHeaderPosition() {
-        var headerOffset = getHeaderOffset();
-        var headerWidth = $('#pageHeader').outerWidth();
-        var headerHeight = $('#pageHeader').outerHeight();
+        var elPageHeader = $('#pageHeader');
+        var elPageHeaderText = $('#pageHeaderText');
+        var headerOffset = getOffset(elPageHeader);
+        var headerWidth = elPageHeader.outerWidth();
+        var headerHeight = elPageHeader.outerHeight();
         var letterSpacing = headerOffset < 0 ? 0 : headerOffset / 10;
-        var textWidth =  $('#pageHeaderText').outerWidth();
-        var textHeight =  $('#pageHeaderText').outerHeight();
+        var textWidth =  elPageHeaderText.outerWidth();
+        var textHeight =  elPageHeaderText.outerHeight();
 
-        $('#pageHeaderText').css({
+        elPageHeaderText.css({
             letterSpacing: letterSpacing,
             top: (headerHeight - textHeight)/2,
             left: (headerWidth - textWidth)/2,
